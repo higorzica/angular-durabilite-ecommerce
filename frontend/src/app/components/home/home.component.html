@@ -1,0 +1,20 @@
+<div class="container-home-geral">
+    <div class="tituloprincipal">
+        <h1 class="titulosuperior-home">Durabilite Brechó - Moda Sustentável e Preços Baixos!</h1>
+    </div>
+    <div class="container-produtos">
+        <ngb-carousel *ngIf="popularProdutosCarrosel">
+            <ng-template *ngFor="let item of popularProdutosCarrosel" ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img class="product-header-img" [src]="'http://localhost:3000/' + item.imagem" alt="Random first slide" />
+                </div>
+                <div class="carousel-caption">
+                    <h3>{{item.nome}}</h3>
+                    <h4>R$ {{item.preco}}</h4>
+                    <p>{{item.descricao}}</p>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+
+</div>

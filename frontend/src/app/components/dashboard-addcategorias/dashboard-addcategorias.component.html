@@ -1,0 +1,10 @@
+<div class="add-produtos">
+    <h1>Adicionar Nova Categoria</h1>
+    <p class="message-p"> {{addCategoriaMensagem}}</p>
+    <form [formGroup]="formCategoria" (ngSubmit)="submitCategoria()" class="common-form">
+        <label for="nome">Nome da Categoria de produto:</label>
+        <input class="form-input" type="text" placeholder="Insira o nome da Categoria" formControlName="nome">
+
+        <button class="form-button">Salvar</button>
+    </form>
+</div>

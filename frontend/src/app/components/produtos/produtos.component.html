@@ -1,0 +1,23 @@
+<div class="produto-lista-wrapper">
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let item of cardProdutos"
+         style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+            <div class="produtos-item">
+                <img [src]="'http://localhost:3000/' + item.imagem" alt="">
+            </div>
+            <div class="produtos-detalhes">
+                <h4 class="nome-produto-titulo">{{item.nome}}</h4> 
+                <div class="produto-preco">
+                    <h5>Preço: R$ {{item.preco}}</h5>
+                </div>               
+                <div class="produto-cor">
+                    <h5>Cor: {{item.cor}} </h5>
+                </div>               
+            </div>
+            <div class="produto-footer">
+                <a class="btn btn-outline-dark ml-2" routerLink="/detalhesproduto/{{item.id}}">Ver Detalhes</a>
+                <a class="btn btn-primary ml-2" target="_blank" href="https://api.whatsapp.com/send?phone=553193773455&text=Olá%20Gostaria%20de%20reservar%20o%20produto:%20{{item.nome}}%0AEtiqueta:%20{{item.preco}}%20Visto%20no%20site">Efetuar Pedido</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="produto-lista-wrapper">
+    <div class="row" style="gap: 25px;display: flex;justify-content: center;align-items: center;">
+        <div class="col-sm-3"
+         style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+         <h1>Categorias</h1>
+            <div class="produtos-item">
+                <img src="../../../assets/icones/categorias.png" alt="">
+            </div>
+            <div class="produtos-detalhes">
+                <h4 class="nome-produto-titulo">Total de Categorias: {{totalCategorias}}</h4> 
+                <div class="produto-preco">
+                    <h6>Categorias: 
+                        <div *ngFor="let item of CategoriaLista">
+                            <span>
+                                {{item.nome}}
+                            </span>
+                        </div>
+                    </h6>
+                </div> 
+                <button (click)="listCategoriasRota()"  class="btn btn-primary me-2 mt-2">Lista de Categorias</button>                            
+                <button (click)="addCategoriasRota()" class="btn btn-secondary me-2 mt-2">Cadastrar Categorias</button>                            
+            </div>
+            <br>
+        </div>
+        <div class="col-sm-3"
+         style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+         <h1>Produtos</h1>
+            <div class="produtos-item">
+                <img src="../../../assets/icones/roupas.png" alt="">
+            </div>
+            <div class="produtos-detalhes">
+                <h4 class="nome-produto-titulo">Total de Produtos: {{produtosAtivos}}</h4> 
+                <div class="produto-preco">
+                    <h6>Todos os produtos cadastrados somam: R$ {{totalProdutosPreco}} </h6>
+                </div> 
+                <button (click)="listProdutosRota()"  class="btn btn-primary me-2 mt-2">Lista de Produtos</button>                            
+                <button (click)="addProdutosRota()" class="btn btn-secondary me-2 mt-2">Cadastrar Produtos</button>                            
+            </div>
+            <br>
+        </div>
+        <div class="col-sm-3"
+         style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+         <h1>Usuários</h1>
+            <div class="produtos-item">
+                <img src="../../../assets/icones/usuarios.png" alt="">
+            </div>
+            <div class="produtos-detalhes">
+                <h4 class="nome-produto-titulo">Total de Usuários do sistema: {{totalUsuarios}}</h4> 
+                <button (click)="listProdutosRota()"  class="btn btn-primary me-2 mt-2">Lista de Usuários</button>                            
+                <button (click)="addProdutosRota()" class="btn btn-secondary me-2 mt-2">Cadastrar Usuários</button>                            
+            </div>
+            <br>
+        </div>
+    </div>
+</div>

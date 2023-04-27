@@ -1,0 +1,6 @@
+iniciar frontend
+ng serve
+
+iniciar backend
+npm run typescript
+npm run dev

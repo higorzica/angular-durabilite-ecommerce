@@ -1,0 +1,34 @@
+<div class="produtos-lista">
+    <h1>Todos os produtos:</h1>
+    <p class="message-p"> {{produtoMensagem}}</p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Imagem</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Categoria</th>
+                <th>Cor</th>
+                <th>Descrição</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of produtosLista">
+                <td style="text-align: center;"><img class="me-2" [src]="'http://localhost:3000/' + item.imagem" alt=""></td>
+                <td>{{item.nome}}</td>
+                <td>R$ {{item.preco}}</td>
+                <td>{{item.categoria}}</td>
+                <td>{{item.cor}}</td>
+                <td>{{item.descricao}}</td>
+                <td>
+                <div class="container-edit-icons">
+                    <fa-icon class="ajuste-del-produto" (click)="apagarProduto(item.id)" [icon]="iconDel"></fa-icon>
+                    <a class="ajuste-editar-produto" routerLink="/dashboard-editarprodutos/{{item.id}}"><fa-icon [icon]="iconEdit"></fa-icon></a>
+                </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

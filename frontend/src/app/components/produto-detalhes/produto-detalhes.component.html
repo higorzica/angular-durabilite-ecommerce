@@ -1,0 +1,28 @@
+<div class="container">
+    <article class="card" *ngIf="produtoItem">
+        <div class="card__publication">
+            <img [src]="'http://localhost:3000/' + produtoItem.imagem" alt="" />
+            <div>
+                <span class="card__author stroke">
+                    <i class="ri-user-line card__icon"></i> {{titleEmpresa}}
+                </span>
+            </div>
+        </div>
+        <div class="card__info">
+            <h2 class="card__title">{{produtoItem.nome}}</h2>
+            <span class="card__subtitle">R$ {{produtoItem.preco}}</span>
+            <div>
+                <span>Cor Etiqueta:  </span> 
+                <h5 [style.backgroundColor]="produtoItem.cor" class="produto-cor"></h5>
+            </div>
+            <p class="card__description">
+               Categoria: {{produtoItem.categoria}}
+            </p>
+            <p class="card__description">
+                {{produtoItem.descricao}}
+            </p>
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=553193773455&text=Olá%20Gostaria%20de%20reservar%20o%20produto:%20{{produtoItem.nome}}%0AEtiqueta:%20{{produtoItem.preco}}%20Visto%20no%20site"
+             class="card__cta"> Efetuar Pedido <span>&rarr;</span> </a>
+        </div>
+    </article>
+</div>

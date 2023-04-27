@@ -1,0 +1,28 @@
+<div class="editar-produtos">
+    <h1>Editar Produto</h1>
+    <p class="message-p"> {{produtoMensagem}}</p>
+    <form [formGroup]="form" (ngSubmit)="submitProduto()" class="common-form">
+        <label for="nome">Nome do Produto:</label>
+        <input class="form-input" ngModel="{{produtoData?.nome}}" type="text" name="nome" placeholder="Insira o nome do Produto"   [ngModelOptions]="{standalone: true}">
+
+        <label for="nome">Preço:</label>
+        <input class="form-input" ngModel="{{produtoData?.preco}}" type="text" name="preco" placeholder="Insira o preço" [ngModelOptions]="{standalone: true}">
+
+        <label for="categoria">Categoria:</label>
+        <select class="form-input" autocomplete="off" placeholder="Insira o nome do Produto" formControlName="categoria">
+            <option  *ngFor="let item of categoriasListas">{{item.nome}}</option>
+        </select>
+
+        <label for="nome">Etiqueta de Cor:</label>
+        <input class="form-input" ngModel="{{produtoData?.cor}}" type="text" name="cor" placeholder="Selecione a cor" [ngModelOptions]="{standalone: true}">
+
+        <label for="nome">Descrição:</label>
+        <textarea class="form-input" ngModel="{{produtoData?.descricao}}" type="text" name="descricao" [ngModelOptions]="{standalone: true}"
+        placeholder="Escreva uma breve descrição do produto"></textarea>
+
+        <label for="nome">Imagem:</label>
+        <input class="form-input" ngModel="{{produtoData?.imagem}}" type="file" name="imagem" placeholder="Adicione uma foto do produto" [ngModelOptions]="{standalone: true}">
+        <img class="imagem-editar-produtos" [src]="'http://localhost:3000/' + produtoData?.imagem" alt="">
+        <button class="form-button mt-2">Salvar</button>
+    </form>
+</div>

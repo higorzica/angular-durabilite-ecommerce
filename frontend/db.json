@@ -1,0 +1,111 @@
+{
+  "usuarios": [
+    {
+      "nome": "Higor Zica",
+      "email": "higorbhe@gmail.com",
+      "senha": "higor123",
+      "id": "1"
+    },
+    {
+      "nome": "Elizete Zica",
+      "email": "elizete@gmail.com",
+      "senha": "elizete123",
+      "id": "2W0tpRA"
+    },
+    {
+      "nome": "Hugo Zica",
+      "email": "hugo@gmail.com",
+      "senha": "hugo123",
+      "id": "YJYxG90"
+    },
+    {
+      "nome": "Olavo Zica",
+      "email": "olavo@gmail.com",
+      "senha": "olavo123",
+      "id": "od3Z1CE"
+    },
+    {
+      "nome": "Teste",
+      "email": "teste1@gmail.com",
+      "senha": "teste123",
+      "id": "jjaQU-E"
+    },
+    {
+      "nome": "Teste 2",
+      "email": "teste2@gmail.com",
+      "senha": "teste2senha",
+      "id": "wH-mv4j"
+    },
+    {
+      "nome": "Teste 3",
+      "email": "teste3@gmail.com",
+      "senha": "teste3senha",
+      "id": "qYcARBS"
+    }
+  ],
+  "produtos": [
+    {
+      "nome": "Blusa de Onçinha",
+      "preco": "22.99",
+      "categoria": "Blusa",
+      "cor": "black",
+      "descricao": "Blusa teste primeiro produto",
+      "imagem": "https://www.guller.com.br/10758-medium_default/blusa-estampada-on%C3%A7a-com-al%C3%A7a-fina-decote-v-estilo-casual-sexy-fashion-moda-ver%C3%A3o-feminina.jpg",
+      "id": 1
+    },
+    {
+      "nome": "Short Jeans",
+      "preco": "49.99",
+      "categoria": "Short",
+      "cor": "blue",
+      "descricao": "Teste de cadastro de produtos 3",
+      "imagem": "https://d3ugyf2ht6aenh.cloudfront.net/stores/002/071/006/products/short_jeans_feminino_cos_alto1-29b17d400066a023dc16630798541888-640-0.webp",
+      "id": 3
+    },
+    {
+      "nome": "Short Jeans 2",
+      "preco": "69.99",
+      "categoria": "Short",
+      "cor": "blue",
+      "descricao": "Teste de população e limit",
+      "imagem": "https://itapua.vteximg.com.br/arquivos/ids/1530141-1000-1000/image-47dca52be6a14e519c1014d53636153a.jpg?v=638047712286370000",
+      "id": 4
+    },
+    {
+      "nome": "Short Jeans 3",
+      "preco": "30.99",
+      "categoria": "Short",
+      "cor": "blue",
+      "descricao": "shortinho branco cavado.",
+      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc-Ifqv-JtIDRs_By6dSgnWgbf1Ae_0FbK5w&usqp=CAU",
+      "id": 5
+    },
+    {
+      "nome": "Calça Jeans",
+      "preco": "89.99",
+      "categoria": "Calça",
+      "cor": "black",
+      "descricao": "teste de calça jeans cintura alta",
+      "imagem": "https://beide.vtexassets.com/arquivos/ids/195724/Foto-1.jpg?v=638097278188170000",
+      "id": 6
+    },
+    {
+      "nome": "Vestido Florido",
+      "preco": "109.99",
+      "categoria": "Vestido",
+      "cor": "pink",
+      "descricao": "Teste vestido florido.",
+      "imagem": "https://d3ugyf2ht6aenh.cloudfront.net/stores/048/075/products/vestido-floral-manga-longa-221-6d88f44be39c0923af16433944902349-640-0.webp",
+      "id": 7
+    },
+    {
+      "nome": "Vestido Preto",
+      "preco": "69.99",
+      "categoria": "Vestido",
+      "cor": "black",
+      "descricao": "Teste de lançamento json.",
+      "imagem": "https://jeitodemulher.shop/wp-content/uploads/2020/10/jeitodemulher_shop-vestido-preto-lurex-6.jpg",
+      "id": 8
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+.common-form{
+    text-align: center;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 400px;
+
+    label{
+        text-align: left;
+    }
+}
+
+.form-input{
+    height: 35px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.form-button{
+    height: 35px;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.error-p{
+    color: red;
+}
+
+.message-p{
+    color: green;
+}

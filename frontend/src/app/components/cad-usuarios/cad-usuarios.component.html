@@ -1,0 +1,43 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+	<li [ngbNavItem]="1">
+        <button ngbNavLink>Login</button>
+            <ng-template ngbNavContent>
+                <div class="cad-users">
+                    <div class="signup">
+                        <h3>Insira seus dados para entrar no sistema:</h3>
+                        <p class="error-form">{{authError}}</p>
+                        <form #formularioLogin="ngForm" (ngSubmit)="login(formularioLogin.value)" class="common-form">
+                            <label for="nome">E-mail:</label>
+                            <input class="form-input" [(ngModel)]="email" type="text" name="email" id="email" placeholder="Insira seu email">
+                            <label for="nome">Senha:</label>
+                            <input class="form-input" [(ngModel)]="senha" type="password" name="senha" id="senha" placeholder="Insira sua senha">
+                            <button class="form-button">Entrar</button>
+                        </form>
+                    </div>
+                </div>
+            </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+        <button ngbNavLink>Cadastrar</button>
+            <ng-template ngbNavContent>
+                <div class="cad-users">
+                    <div class="signup">
+                        <h3>Cadastrar usuário de acesso:</h3>
+                        <form #formularioCad="ngForm" (ngSubmit)="signUp(formularioCad.value)" class="common-form">
+                            <label for="nome">Nome:</label>
+                            <input class="form-input" [(ngModel)]="nome"  type="text" name="nome" id="nome" placeholder="Insira seu nome">
+                            <label for="nome">E-mail:</label>
+                            <input class="form-input" [(ngModel)]="email" type="text" name="email" id="email" placeholder="Insira seu email">
+                            <label for="nome">Senha:</label>
+                            <input class="form-input" [(ngModel)]="senha" type="password" name="senha" id="senha" placeholder="Insira sua senha">
+                            <button class="form-button">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+            </ng-template>
+    </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+

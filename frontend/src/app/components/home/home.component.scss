@@ -1,0 +1,36 @@
+.container-home-geral{
+    background-color: #010101 !important; 
+    margin-bottom: 10px;
+}
+
+.tituloprincipal{
+    padding-top: 20px;
+}
+
+.titulosuperior-home{
+    text-align: center;
+    color: #fff;
+}
+
+.container-produtos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.product-header-img{
+    object-fit: contain;
+    height: 600px;
+    width: 100%;
+}
+
+.carousel-caption {
+    background-color: #0000006e;
+    border-radius: 5px;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background-color: black !important;
+    border: 5px !important;
+}

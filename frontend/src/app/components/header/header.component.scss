@@ -1,0 +1,147 @@
+:host {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #331b70;
+    height: 55px;
+  }
+
+  .nav #logo-dura {
+    margin-left: 20px;
+  }
+
+  .nav ul {
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav li {
+    padding-left: 15px;
+    padding-top: 15px;
+    margin-right: 50px;
+  }
+
+  .nav li a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .nav .pesquisar{
+    margin-top: 5px;
+    flex: 1;
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .nav .pesquisar input{
+    margin-top: 10px;
+    flex: 1;
+    border: 1px solid #000;
+    height: 30px;
+    border-right: 0px;
+  }
+
+  .nav .pesquisar button{
+    margin-top: 10px;
+    color: #222222;
+    border: 1px solid #000;
+    height: 30px;
+    border-left : 0px;
+  }
+
+  .usuariologado {
+    margin-top: 15px;
+    color: #FFF;
+    position: relative;
+
+  }
+
+  .sair{
+    cursor: pointer;
+  }
+
+  .sugestao-resultado{
+    position: absolute;
+    display: list-item !important;
+    z-index: 10;
+    background-color: #FFF;
+    width: 300px;
+    top: 40px;
+    border: 1px solid #ddd;
+  }
+
+  .sugestao-resultado li {
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 5px;
+  }
+
+  .sugestao-resultado li a {
+    cursor: pointer;
+    color: #000;
+  }
+
+
+
+  /* Responsive Styles */
+
+  @media screen and (max-width: 1179px) {
+    #face-logo {
+      display: none;
+      visibility: hidden;
+    }
+    #insta-logo {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .pesquisar {
+        width: 80%;
+    }
+
+    .nav{
+      height: 120px;
+    }
+
+    .nav li a {
+      font-weight: 500;
+      font-size: 10.5px;
+    }
+  
+    .usuariologado {
+      font-weight: 500;
+      font-size: 10.5px;
+      margin-top: 20px;
+      display: block;
+    }
+
+  }
+
+  @media screen and (max-width: 575px) {
+    .pesquisar {
+        width: 70%;
+    }
+    .nav li a {
+        font-weight: 500;
+        font-size: 10.5px;
+        display: inline-flex;
+      }
+    
+      .usuariologado {
+        font-weight: 500;
+        font-size: 10.5px;
+        position: relative;
+      }
+  }
