@@ -1,36 +1,48 @@
 <div class="add-produtos">
-    <h1>Adicionar Novo Produto</h1>
+    <h2>Adicionar Novo Produto</h2>
     <p class="message-p"> {{addProdutoMensagem}}</p>
     <form [formGroup]="form" (ngSubmit)="submitProduto()" class="common-form" enctype="multipart/form-data">
-        <label for="nome">Nome do Produto:</label>
-        <input class="form-input" type="text" placeholder="Insira o nome do Produto" formControlName="nome">
+        <div class="form-group">
+            <label for="nome">Nome do Produto:</label>
+            <input class="form-control" type="text" placeholder="Insira o nome do Produto" formControlName="nome">
+        </div>
 
-        <label for="preco">Preço:</label>
-        <input class="form-input" type="text" placeholder="Insira o preço" formControlName="preco">
+        <div class="form-group">
+            <label for="preco">Preço:</label>
+            <input class="form-control" type="text" placeholder="Insira o preço" formControlName="preco">
 
-        <label for="categoria">Categoria:</label>
-        <select class="form-input" autocomplete="off" placeholder="Insira o nome do Produto" formControlName="categoria">
-            <option *ngFor="let item of categoriasListas">{{item.nome}}</option>
-        </select>
+        </div>
 
-        <label for="cor">Etiqueta de Cor:</label>
-        <input class="form-input" type="text" placeholder="Selecione a cor" formControlName="cor">
+        <div class="form-group">
+            <label for="categoria">Categoria:</label>
+            <select class="form-control" autocomplete="off" placeholder="Insira o nome do Produto" formControlName="categoria">
+                <option *ngFor="let item of categoriasListas">{{item.nome}}</option>
+            </select>
 
-        <label for="descricao">Descrição:</label>
-        <textarea type="text" placeholder="Escreva uma breve descrição do produto" formControlName="descricao"></textarea>
+        </div>
 
-        <div style="text-align: left;" *ngFor="let data of status; let i=index">
-            <label>
-              <input type="checkbox" [value]="data.valor" (change)="onCheckboxChange($event)" />
-              {{data.nome}}
-            </label>
-          </div>
+        <div class="form-group">
+            <label for="cor">Etiqueta de Cor:</label>
+            <input class="form-control" type="color" placeholder="Selecione a cor" formControlName="cor">
 
-        <!-- <label><input type="radio" formControlName="status" value="Ativo" /> - Ativo</label>
-        <label><input type="radio" formControlName="status" value="Inativo" /> - Inativo</label> -->
+        </div>
+        <div class="form-group">
+            <label for="descricao">Descrição:</label>
+            <textarea type="text" class="form-control" placeholder="Escreva uma breve descrição do produto" formControlName="descricao"></textarea>
+
+
+        </div>
+        <div class="form-group">
+            <div style="text-align: left;" *ngFor="let data of status; let i=index">
+                <label>
+                  <input class="form-check-input" type="checkbox" [value]="data.valor" (change)="onCheckboxChange($event)" />
+                  {{data.nome}}
+                </label>
+              </div>
+        </div>
 
         <label for="iamgem">Imagem:</label>
-        <input class="custom-file-input" type="file" placeholder="Adicione uma foto do produto" formControlName="imagem" (change)="onChange($event)">
+        <input class="form-control" type="file" placeholder="Adicione uma foto do produto" formControlName="imagem" (change)="onChange($event)">
 
         <div class="imagem-add-produtos">
             <img class="img-produto" [src]="isDefault ? isDefaultImagem : preview" alt="">

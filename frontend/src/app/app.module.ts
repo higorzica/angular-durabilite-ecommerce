@@ -23,6 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { DashboardAddcategoriasComponent } from './components/dashboard-addcategorias/dashboard-addcategorias.component';
 import { DashboardListcategoriasComponent } from './components/dashboard-listcategorias/dashboard-listcategorias.component';
+import { DashboardListusuariosComponent } from './components/dashboard-listusuarios/dashboard-listusuarios.component';
+import { DashboardAddusuariosComponent } from './components/dashboard-addusuarios/dashboard-addusuarios.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { DashboardListcategoriasComponent } from './components/dashboard-listcat
     PesquisarComponent,
     ProdutoDetalhesComponent,
     DashboardAddcategoriasComponent,
-    DashboardListcategoriasComponent
+    DashboardListcategoriasComponent,
+    DashboardListusuariosComponent,
+    DashboardAddusuariosComponent
   ],
   imports: [
     BrowserModule,

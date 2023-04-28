@@ -13,6 +13,8 @@ import { PesquisarComponent } from './components/pesquisar/pesquisar.component';
 import { ProdutoDetalhesComponent } from './components/produto-detalhes/produto-detalhes.component';
 import { DashboardAddcategoriasComponent } from './components/dashboard-addcategorias/dashboard-addcategorias.component';
 import { DashboardListcategoriasComponent } from './components/dashboard-listcategorias/dashboard-listcategorias.component';
+import { DashboardListusuariosComponent } from './components/dashboard-listusuarios/dashboard-listusuarios.component';
+import { DashboardAddusuariosComponent } from './components/dashboard-addusuarios/dashboard-addusuarios.component';
 
 const routes: Routes = [
   {
@@ -67,6 +69,16 @@ const routes: Routes = [
   {
     path:'dashboard-listcategorias',
     component: DashboardListcategoriasComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path:'dashboard-listusuarios',
+    component: DashboardListusuariosComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path:'dashboard-addusuarios',
+    component: DashboardAddusuariosComponent,
     canActivate: [AuthGuard]
   }
 

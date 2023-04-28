@@ -40,4 +40,12 @@ export class NovousuarioService {
     return this.http.post<string>(`${this.myAppUrl}${this.myApiUrl}/login`, data)
   }
 
+  deleteUsuario(id: number | null | undefined) {
+    return this.http.delete(`${this.myAppUrl}${this.myApiUrl}/deleteUsuarios/${id}`);
+  }
+
+  createUsuario(data:CadNovosUsuarios): Observable<any> {
+    return this.http.post(`${this.myAppUrl}${this.myApiUrl}/novoUsuario`,data);
+  }
+
 }

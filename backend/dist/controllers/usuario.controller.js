@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.loginUser = exports.newUser = exports.getUsuarios = void 0;
+exports.loginUser = exports.newUser = exports.deleteUsuario = exports.getUsuarios = void 0;
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const usuario_1 = require("../models/usuario");
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
@@ -21,6 +21,22 @@ const getUsuarios = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     res.json(listUsuarios);
 });
 exports.getUsuarios = getUsuarios;
+const deleteUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { id } = req.params;
+    const usuario = yield usuario_1.Usuario.findByPk(id);
+    if (!usuario) {
+        res.status(404).json({
+            msg: `Não existe essa categoria com esse numero de ID: ${id}`
+        });
+    }
+    else {
+        yield usuario.destroy();
+        res.json({
+            msg: `O categoria foi apagado com sucesso: ${id}`
+        });
+    }
+});
+exports.deleteUsuario = deleteUsuario;
 const newUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { nome, email, senha } = req.body;
     //VALIDAÇÕES

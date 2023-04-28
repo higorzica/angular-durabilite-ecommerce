@@ -16,12 +16,12 @@
         <tbody>
             <tr *ngFor="let item of produtosLista">
                 <td style="text-align: center;"><img class="me-2" [src]="'http://localhost:3000/' + item.imagem" alt=""></td>
-                <td>{{item.nome}}</td>
-                <td>R$ {{item.preco}}</td>
-                <td>{{item.categoria}}</td>
-                <td>{{item.cor}}</td>
-                <td>{{item.descricao}}</td>
-                <td>
+                <td style="text-align: center;">{{item.nome}}</td>
+                <td style="text-align: center;">R$ {{item.preco}}</td>
+                <td style="text-align: center;">{{item.categoria}}</td>
+                <td style="text-align: center;">{{item.cor}}</td>
+                <td style="text-align: center;">{{item.descricao}}</td>
+                <td style="text-align: center;">
                 <div class="container-edit-icons">
                     <fa-icon class="ajuste-del-produto" (click)="apagarProduto(item.id)" [icon]="iconDel"></fa-icon>
                     <a class="ajuste-editar-produto" routerLink="/dashboard-editarprodutos/{{item.id}}"><fa-icon [icon]="iconEdit"></fa-icon></a>

@@ -10,6 +10,26 @@ export const getUsuarios = async (req: Request, res: Response) => {
         res.json(listUsuarios);
 }
 
+export const deleteUsuario = async (req: Request, res: Response) => {
+
+    const { id } = req.params; 
+
+    const usuario = await Usuario.findByPk(id);
+
+    if (!usuario) {
+        res.status(404).json({
+            msg: `Não existe essa categoria com esse numero de ID: ${id}`
+        })
+    } else {
+        await usuario.destroy();
+        res.json({
+            msg: `O categoria foi apagado com sucesso: ${id}`
+        })
+    }
+}
+
+
+
 export const newUser = async (req: Request, res: Response) => {
     
     const {nome, email , senha} = req.body;

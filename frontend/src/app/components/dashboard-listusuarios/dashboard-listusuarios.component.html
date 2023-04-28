@@ -1,0 +1,30 @@
+<div class="usuarios-lista">
+    <h2>Todos Usuários do sistema:</h2>
+    <!-- <p class="message-p"> {{produtoMensagem}}</p> -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Senha</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of UsuariosLista">
+                <td>{{item.id}}</td>
+                <td>{{item.nome}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.senha}}</td>
+                <td>
+                <div class="container-edit-icons">
+                    <fa-icon class="ajuste-del-usuario" (click)="apagarCategoria(item.id)" [icon]="iconDel"></fa-icon>
+                    <a class="ajuste-editar-usuario" routerLink="/dashboard-editarcategorias/{{item.id}}"><fa-icon [icon]="iconEdit"></fa-icon></a>
+                </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

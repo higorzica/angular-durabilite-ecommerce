@@ -1,0 +1,24 @@
+<div class="add-usuarios">
+    <h2>Adicionar Novo Usuário</h2>
+    <p class="message-p"> {{addUsuarioMensagem}}</p>
+    <form [formGroup]="form" (ngSubmit)="submitUsuario()" class="common-form" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input class="form-control" [(ngModel)]="nome" type="text" placeholder="Insira o nome" formControlName="nome">
+        </div>
+
+        <div class="form-group">
+            <label for="preco">E-mail:</label>
+            <input class="form-control" [(ngModel)]="email" type="text" placeholder="Insira o email" formControlName="email">
+
+        </div>
+
+        <div class="form-group">
+            <label for="cor">Senha:</label>
+            <input class="form-control" [(ngModel)]="senha" type="password" placeholder="Selecione a cor" formControlName="senha">
+
+        </div>
+
+        <button class="form-button mt-2">Salvar</button>
+    </form>
+</div>

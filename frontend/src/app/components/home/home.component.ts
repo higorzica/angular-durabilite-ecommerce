@@ -21,6 +21,11 @@ export class HomeComponent implements OnInit {
   todosProdutosCard() {
     this.produtosService.popularProdutos().subscribe((data) => {
       this.popularProdutosCarrosel=data;
+      const filtroCarroselAtivos = this.popularProdutosCarrosel.filter((obj:any) => {
+        return obj.status === 'ativo'
+      })
+      console.log(filtroCarroselAtivos)
+      this.popularProdutosCarrosel = filtroCarroselAtivos;
     });
   }
 

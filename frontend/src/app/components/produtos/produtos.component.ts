@@ -14,8 +14,17 @@ export class ProdutosComponent implements OnInit {
   constructor(private produtosService: ProdutosService)  {}
 
   ngOnInit(): void {
-    this.produtosService.getProdutos().subscribe((data) => {
-      this.cardProdutos=data
+    this.TodosProdutosAtivos();
+  }
+
+  TodosProdutosAtivos() {
+    this.produtosService.popularProdutos().subscribe((data) => {
+      this.cardProdutos=data;
+      const filtroCarroselAtivos = this.cardProdutos.filter((obj:any) => {
+        return obj.status === 'ativo'
+      })
+      console.log(filtroCarroselAtivos)
+      this.cardProdutos = filtroCarroselAtivos;
     });
   }
 
